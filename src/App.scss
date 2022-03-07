@@ -1,0 +1,20 @@
+body{
+    background-color: silver;
+}
+
+.txt{
+    text-align: center;
+    color: red;
+    border: 1px solid red;
+    width: 350px;
+}
+
+.txt:hover{
+    color: blue;
+    border: 1px solid blue;
+}
+
+.imgEl{
+    width: 300px;
+   
+}
