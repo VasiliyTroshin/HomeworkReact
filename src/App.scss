@@ -1,20 +1,43 @@
-body{
-    background-color: silver;
-}
-
-.txt{
+.App {
     text-align: center;
-    color: red;
-    border: 1px solid red;
-    width: 350px;
-}
-
-.txt:hover{
-    color: blue;
-    border: 1px solid blue;
-}
-
-.imgEl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 300px;
-   
-}
+    min-height: 300px;
+    padding: 0 40px;
+    flex-direction: column;
+  }
+  
+  .messageLs{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 400px;
+    margin: auto;
+    background-color: rgb(236, 229, 236);
+    border-radius: 20px;
+    margin: 30px auto;
+  
+  }
+  
+  .messageDesign{
+    background-color: cornflowerblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  
+  &.me{
+    text-align: right;
+    margin-left: 40px;
+  }
+  
+  &.bot{
+    text-align: left;
+    margin-right: 40px;
+  }
+  }
+  
+  
+  
+  
