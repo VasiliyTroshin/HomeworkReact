@@ -11,6 +11,18 @@
 
 }
 
+body{
+  background-color: aliceblue;
+}
+
+.dark{
+  color: red;
+}
+
+.light{
+  background-color: aliceblue;
+}
+
 .header{
     display: flex;
     justify-content: space-between;

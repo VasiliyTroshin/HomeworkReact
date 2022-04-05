@@ -12,11 +12,11 @@ import Layout from './pages/Layout';
 
 
 function App() {
-
+   
   return (
         
         <Routes>
-            <Route className='header>' path='/' element={<Layout/>}>
+            <Route  path='/' element={<Layout/>}>
               <Route index element={<Home/>}/>
               <Route path='/chats' element={<Chats/>}/>
               <Route path='/profile' element={<Profile/>}/>
