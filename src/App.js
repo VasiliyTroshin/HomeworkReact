@@ -10,29 +10,22 @@ import NoChats from './pages/NoChats';
 import Layout from './pages/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { chatSelector } from './redux/store/reducers/chatSelector/selector';
+import { botSelector } from './redux/store/reducers/chatSelector/botSelector';
+import { getBot } from './redux/store/reducers/action';
 
 
 function App() {
-   const chats=useSelector(chatSelector);
+   
+   const bot=useSelector(botSelector);
    const dispatch=useDispatch();
 
-   const add=(name)=>{
-     const obj={
-       name:name
-     }
-     dispatch({type:'add',payload:obj})
-   }
+   
+   useEffect(()=>{
+     dispatch(getBot())
+   },[])
   return (
         <div>
-          {
-            chats.map((chat)=>(
-              <li>
-                {chat.name}
-                <button onClick={()=>dispatch({type:'delete',payload:chat.id})}>x</button>
-              </li>
-            ))
-          }
-          <button onClick={()=>add(prompt())}>Add</button>
+          {bot}
         </div>
         
         // <Routes>
